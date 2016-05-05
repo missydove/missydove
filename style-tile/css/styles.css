@@ -1,2 +1,26 @@
+/* My Awesome Styling*/
+/*
 
+/* Header*/
+header img{
+    width: 100px;
+    
+}
 
+.color-1 {
+    background: #B80C09;
+}
+
+.color-2{
+    background: #ffffff;
+        
+}
+.color-3{
+    background: #010001;
+}
+.color-4{
+    background: #423629;
+}
+.pattern-1{
+    background-image:url(../img/gplaypattern.png);
+}
