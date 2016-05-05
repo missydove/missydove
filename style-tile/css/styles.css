@@ -24,3 +24,12 @@ header img{
 .pattern-1{
     background-image:url(../img/gplaypattern.png);
 }
+.icon-1{
+  object-fit: fill;
+ 
+    
+}
+.icon-2{
+object-fit: fill; }
+
+.icon-3{object-fit: cover;}
