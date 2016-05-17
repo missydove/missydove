@@ -11,12 +11,12 @@
 font-family: 'Merriweather', serif;  
         
 } 
-
+/*secondary header*/
 @import url(https://fonts.googleapis.com/css?family=Merriweather:700);
 h2 {
   font-family: 'Merriweather', serif;  
 }
-
+/*h3 paragraphs*/
 @import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
 h3 {
   font-family: 'Merriweather Sans', sans-serif;  
