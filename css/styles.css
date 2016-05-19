@@ -2,3 +2,54 @@ body{
     background: red;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Merriweather:900);
+    h1 {
+font-family: 'Merriweather', serif;  
+        
+} 
+
+//*nav button*//
+ul {
+  margin: 40px auto;
+  text-align:center;
+  font-size: 0;
+}
+li {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background: #010001;
+  font-size: 16px;
+  line-height: 100px;
+  z-index: 2;
+    }
+li a {
+  display: block;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+    text-align: center;
+}
+li:hover a {
+  font-weight: bold;
+  color: #000;
+}
+li:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 110px;
+  height: 100px;
+  background: #eee;
+  transition: 0.5s ease-in-out;
+  opacity: .2;
+  z-index: -1;
+}
+li:hover:before {
+  right: 110px
+}
