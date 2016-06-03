@@ -1,130 +1,277 @@
-body{
-    background: red;
-}
+/************************
+GENERAL
+**************************/
 
-@import url(https://fonts.googleapis.com/css?family=Merriweather:900);
-    h1 {
-font-family: 'Merriweather', serif;  
-        
-} 
-
-/* images */
-.icon {
- 
-    height: 4em;
-    width: auto;
+body {
+  font-family: 'Lora', Merriwether;
 }
 
 
-//*nav button*//
-ul {
-  margin: 40px auto;
-  text-align:center;
-  font-size: 0;
+#wrapper {
+  max-width: 940px;
+   margin: 0 auto;
+   padding: 0 5%;
 }
-li {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  margin: 0 4px;
-  border-radius: 50%;
-  background: #010001;
-  font-size: 16px;
-  line-height: 100px;
-  z-index: 2;
-    }
-li a {
-  display: block;
-  box-sizing: border-box;
-  color: #fff;
+
+a {
   text-decoration: none;
+}
+  img{
+    max-width: 100%;
+}
+/***************************
+HEADING
+****************************/
+header {
+  float: left;
+  margin: 0 0 30px 0;
+  padding: 5px 0 0 0;
+  width: 100%;
+text-align: center;
+ 
+}
+.run-animation {
+  -webkit-animation: my-fancy-animation 5s 1;
+  -moz-animation:    my-fancy-animation 5s 1;
+  animation:         my-fancy-animation 5s 1;  
+}
+}
+
+#logo {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+      
+  font-family: 'lora', Merriweather;
+  margin: 15px 0;
+  font-size: 1.75em;
+  font-weight: normal;
+  line-height: 0.8em;
+}
+
+h2 {
+  font-size: .75em;
+  margin: -5px 0 0;
+  font-weight: normal;
+}
+
+.h1 {
+animation: bounce 10s 1s infinite;
+
+    
+}
+
+/***************************
+NAVIGATION
+****************************/
+
+nav {
+  text-align: center;
+  padding:10px 0px;
+  margin: 20px 0 0;
+}
+
+
+nav ul {
+list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight:500;
+  padding: 15px 10px;
+}
+
+
+
+/***************************
+PAGE: PORTFOLIO
+****************************/
+
+
+#sb-body input { display: none; }
+
+#sb-body-inner {
+    top:200px;
+    opacity: 0;
+    width: auto;
+    height:auto;
+    display: block;
+    position: absolute;
+    
+    transform: rotate(360deg) scale(0);
+    -moz-transform: rotate(360deg) scale(0);
+    -webkit-transform: rotate(360deg) scale(0);
+    
+    transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -webkit-transition: all .7s ease-in-out;
+}
+
+#sb-body-inner img {
+    width: 60%;
+    height: 60%;
+}
+
+
+#sb-body-inner:hover ~ label[id^="sb-nav-previous-"].sb-bignav, #sb-body-inner:hover ~ label[id^="sb-nav-next-"].sb-bignav { opacity: 0.5; }
+
+label[id^="sb-nav-previous-"].sb-bignav:hover, label[id^="sb-nav-next-"].sb-bignav:hover {
+    opacity: 1.0;
+}
+
+.sb-bignav {
+    display: none;
+    cursor: pointer;
+    position: fixed; 
+    padding: 20px;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    z-index: 4000;
+    opacity: 0;
+    transition: opacity .125s;
+    -moz-transition: opacity .125s;
+    -webkit-transition: opacity .125s;
+}
+
+label[id^="sb-nav-next-"] {
+    right: 0;
+    background: url('http://www.element17.com/images/nav-right.png') center center no-repeat;
+}
+
+label[id^="sb-nav-previous-"] {
+    background: url('http://www.element17.com/images/nav-left.png') center center no-repeat;
+}
+
+#prev-1:checked ~ #sb-body-inner:nth-of-type(1),
+#next-1:checked ~ #sb-body-inner:nth-of-type(1),
+
+#prev-2:checked ~ #sb-body-inner:nth-of-type(2),
+#next-2:checked ~ #sb-body-inner:nth-of-type(2),
+
+#prev-3:checked ~ #sb-body-inner:nth-of-type(3),
+#next-3:checked ~ #sb-body-inner:nth-of-type(3),
+
+#prev-4:checked ~ #sb-body-inner:nth-of-type(4),
+#next-4:checked ~ #sb-body-inner:nth-of-type(4),
+
+#prev-5:checked ~ #sb-body-inner:nth-of-type(5),
+#next-5:checked ~ #sb-body-inner:nth-of-type(5),
+
+#prev-6:checked ~ #sb-body-inner:nth-of-type(6),
+#next-6:checked ~ #sb-body-inner:nth-of-type(6) {
+    opacity: 1;
+    
+    transform: rotate(0deg) scale(1);
+    -moz-transform: rotate(0deg) scale(1);
+    -webkit-transform: rotate(0deg) scale(1);
+  /* Weird bug, setting these to 360deg makes the next buttons stop working. */
+    
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+#prev-1:checked ~ #sb-nav-previous-6,
+#next-1:checked ~ #sb-nav-previous-6,
+#prev-1:checked ~ #sb-nav-next-2,
+#next-1:checked ~ #sb-nav-next-2,
+
+#prev-2:checked ~ #sb-nav-previous-1,
+#next-2:checked ~ #sb-nav-previous-1,
+#prev-2:checked ~ #sb-nav-next-3,
+#next-2:checked ~ #sb-nav-next-3,
+
+#prev-3:checked ~ #sb-nav-previous-2,
+#next-3:checked ~ #sb-nav-previous-2,
+#prev-3:checked ~ #sb-nav-next-4,
+#next-3:checked ~ #sb-nav-next-4,
+
+#prev-4:checked ~ #sb-nav-previous-3,
+#next-4:checked ~ #sb-nav-previous-3,
+#prev-4:checked ~ #sb-nav-next-5,
+#next-4:checked ~ #sb-nav-next-5,
+
+#prev-5:checked ~ #sb-nav-previous-4,
+#next-5:checked ~ #sb-nav-previous-4,
+#prev-5:checked ~ #sb-nav-next-6,
+#next-5:checked ~ #sb-nav-next-6,
+
+#prev-6:checked ~ #sb-nav-previous-5,
+#next-6:checked ~ #sb-nav-previous-5,
+#prev-6:checked ~ #sb-nav-next-1,
+#next-6:checked ~ #sb-nav-next-1 { display: block; }
+/***************************
+PAGE: ABOUT
+****************************/
+
+.img-circle {
+  display: block;
+  max-width: 150px;
+  margin: 0 auto 30px;
+  border-radius: 100%;
+}
+
+/*****************************
+COLORS
+**********************************/
+
+/* site body*/
+body {
+  background-color: #fff;
+  color: #999;
+}
+
+/* green header*/
+header{
+  background: #6ab47b;
+  border-color: #599a68;
+}
+
+ /*nav background on mobile */
+nav {
+  background:  #599a68;
+}
+
+/* logo text */
+h1, h2 {
+  color: #fff;
+}
+
+/* links */
+a {
+  color:#6ab47b
+}
+
+
+nav a, nav a:visited {
+  color: #fff;
+  /* nav link */
+}
+/* selected nav link */
+nav a.selected, nav a:hover {
+  color: #32673f;
+}
+/***************************
+FOOTER
+****************************/
+  footer {
+    font-size:0.75em;
     text-align: center;
-}
-li:hover a {
-  font-weight: bold;
-  color: #000;
-}
-li:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 110px;
-  height: 100px;
-  background: #eee;
-  transition: 0.5s ease-in-out;
-  opacity: .2;
-  z-index: -1;
-}
-li:hover:before {
-  right: 110px
+    clear: both;
+    padding-top: 5px;
+    color: #ccc;
 }
 
-//*gallery*//
-* {margin: 0; padding: 0;}
-body {background: #ebe7df;}
-
-.slider{
-	width: 640px; /*Same as width of the large image*/
-	position: relative;
-	/*Instead of height we will use padding*/
-	padding-top: 320px; /*That helps bring the labels down*/
-	
-	margin: 100px auto;
-	
-	/*Lets add a shadow*/
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+.social-icon {
+ width: 20px;
+  height: 20px;
+  margin: 400px 30px;
 }
-
-
-/*Last thing remaining is to add transitions*/
-.slider>img{
-	position: absolute;
-	left: 0; top: 0;
-	transition: all 0.5s;
-}
-
-.slider input[name='slide_switch'] {
-	display: none;
-}
-
-.slider label {
-	/*Lets add some spacing for the thumbnails*/
-	margin: 18px 0 0 18px;
-	border: 3px solid #999;
-	
-	float: left;
-	cursor: pointer;
-	transition: all 0.5s;
-	
-	/*Default style = low opacity*/
-	opacity: 0.5;
-}
-
-.slider label img{
-	display: block;
-}
-
-/*Time to add the click effects*/
-.slider input[name='slide_switch']:checked+label {
-	border-color: #444;
-	opacity: 1;
-}
-/*Clicking any thumbnail now should change its opacity(style)*/
-/*Time to work on the main images*/
-.slider input[name='slide_switch'] ~ img {
-	opacity: 0;
-	
-}
-/*That hides all main images at a 110% size
-On click the images will be displayed at normal size to complete the effect
-*/
-.slider input[name='slide_switch']:checked+label+img {
-	opacity: 1;
-	
-}
-/*Clicking on any thumbnail now should activate the image related to it*/
-
-/*We are done :)*/
