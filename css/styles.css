@@ -3,7 +3,7 @@ GENERAL
 **************************/
 
 body {
-  font-family: 'Lora', Merriwether;
+  font-family: 'Leckerli One', cursive;
 }
 
 
@@ -30,12 +30,8 @@ header {
 text-align: center;
  
 }
-.run-animation {
-  -webkit-animation: my-fancy-animation 5s 1;
-  -moz-animation:    my-fancy-animation 5s 1;
-  animation:         my-fancy-animation 5s 1;  
-}
-}
+
+
 
 #logo {
   text-align: center;
@@ -43,12 +39,16 @@ text-align: center;
 }
 
 h1 {
-      
-  font-family: 'lora', Merriweather;
+   
+  font-family: 'Leckerli One', cursive;
   margin: 15px 0;
   font-size: 1.75em;
   font-weight: normal;
   line-height: 0.8em;
+   
+}
+
+
 }
 
 h2 {
@@ -57,10 +57,123 @@ h2 {
   font-weight: normal;
 }
 
-.h1 {
-animation: bounce 10s 1s infinite;
+/****************************
+Front page EVa
+****************************/
 
+}
+.fundo {
+  
+  margin: 50px auto
+}
+.eve {
+  margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    display: flex;
+    vertical-align: middle; 
     
+ 
+  animation: anda .4s infinite alternate ease-in-out;
+    
+}
+.cabeca {
+  position: absolute;
+  width: 130px;
+  height: 90px;
+  border-radius: 50%;
+  background: #fff;
+  animation: own 2s infinite alternate ease-in-out;
+}
+.rosto {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100px;
+  height: 60px;
+  border-radius: 50%;
+  background: #313131;
+}
+.rosto::before {
+  position: absolute;
+  top: 20px;
+  left: 13px;
+  width: 32px;
+  height: 18px;
+  background: #5DC9DB;
+  transform: rotate(16deg);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #5DC9DB;
+  content:"";
+}
+.rosto::after {
+  position: absolute;
+  top: 20px;
+  left: 56px;
+  width: 32px;
+  height: 18px;
+  background: #5DC9DB;
+  transform: rotate(-16deg);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #5DC9DB;
+  content:"";
+}
+.corpo {
+  position: absolute;
+  top: 95px;
+  left: 15px;
+  width: 100px;
+  height: 150px;
+  border-radius: 50%;
+  background: #fff;
+}
+.corpo::after {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  background: #fff;
+  content:"";
+}
+.braco-1 {
+  position: absolute;
+  left: 100px;
+  width: 30px;
+  height: 110px;
+  transform: rotate(-16deg);
+  border-radius: 50%;
+  background: #fff;
+}
+.braco-2 {
+  position: absolute;
+  left: -30px;
+  width: 30px;
+  height: 110px;
+  transform: rotate(16deg);
+  border-radius: 50%;
+  background: #fff;
+}
+.sombra {
+  width: 90px;
+  height: 10px;
+  background: #000;
+  opacity: 0.1;
+  position: relative;
+  top: 500px;
+  left: 440px;
+  border-radius: 50%;
+  animation: shadow .4s infinite alternate ease-in-out;
+}
+
+@keyframes anda {
+  0%   {transform: translateY(-5px)}
+  100% {transform: translateY(5px)}
+}
+@keyframes own {
+  100% {transform: rotate(-15deg)}
+}
+@keyframes shadow {
+	0% {transform: scaleX(1)}
+	100% {transform: scaleX(1.2)}
 }
 
 /***************************
@@ -212,12 +325,57 @@ label[id^="sb-nav-previous-"] {
 PAGE: ABOUT
 ****************************/
 
-.img-circle {
+.profile {
   display: block;
-  max-width: 150px;
-  margin: 0 auto 30px;
-  border-radius: 100%;
+ 
+  margin: 0 auto 30px ;
+  border-radius: 100px;
+	max-height: 100%;
+    max-width: 200px;
 }
+
+.container {
+
+  column-count: 5;
+    
+
+  
+  column-gap:1px;
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+}
+.item {
+  display: block; 
+  margin:0 auto;
+  padding:2em;
+  color:#ccc;
+
+
+
+}
+.item p {
+padding-bottom: 1em;
+  margin: 0;
+    text-align: center;
+
+    
+}
+.item img {
+  width: 60%;
+    margin-left: 30px;
+  
+  
+ 
+    
+}
+
+
+
+
+
+
+
 
 /*****************************
 COLORS
@@ -225,19 +383,19 @@ COLORS
 
 /* site body*/
 body {
-  background-color: #fff;
+  background-color: #423629;
   color: #999;
 }
 
-/* green header*/
+/* red header*/
 header{
-  background: #6ab47b;
-  border-color: #599a68;
+  background: #B80C09;
+  border-color: #B80C09;
 }
 
  /*nav background on mobile */
 nav {
-  background:  #599a68;
+  background:  #010001;
 }
 
 /* logo text */
@@ -247,7 +405,7 @@ h1, h2 {
 
 /* links */
 a {
-  color:#6ab47b
+  color:#B80C09;
 }
 
 
@@ -257,8 +415,42 @@ nav a, nav a:visited {
 }
 /* selected nav link */
 nav a.selected, nav a:hover {
-  color: #32673f;
+  color: #B80C09;
 }
+
+
+/***************************
+Contact page
+****************************/
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 50px;
+    font-size: 1.25em
+}
+.contact-info a {
+    display: block;
+    min-height: 20px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding: 0 0 0 30px;
+    margin: 1px 0 10px;
+}
+
+    .contact-info li.phone a {
+    background-image: url('../img/phone.svg');
+}
+    .contact-info li.mail a {
+        background-image: url('../img/emailicon.svg');
+}
+    .contact-info li.facebook a{
+            background-image: url('../img/fbIcon.svg');
+}
+
+
+
+
+
 /***************************
 FOOTER
 ****************************/
