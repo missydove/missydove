@@ -55,6 +55,11 @@ h2 {
   font-size: .75em;
   margin: -5px 0 0;
   font-weight: normal;
+   
+}
+
+h3 {
+     text-align: center;
 }
 
 /****************************
@@ -325,55 +330,49 @@ label[id^="sb-nav-previous-"] {
 PAGE: ABOUT
 ****************************/
 
-.profile {
+.profile-photo {
   display: block;
+    padding: 4em;
+  
  
-  margin: 0 auto 30px ;
-  border-radius: 100px;
+  margin: 0 auto 0;
+  border-radius: 100%;
 	max-height: 100%;
-    max-width: 200px;
+
+   
 }
 
 .container {
-
-  column-count: 5;
-    
-
-  
-  column-gap:1px;
-  max-width: 1170px;
-  margin: 0 auto;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+   
 }
-.item {
-  display: block; 
-  margin:0 auto;
-  padding:2em;
-  color:#ccc;
-
-
-
+.container .item {
+  flex: 1 0 25%;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 10px;
 }
 .item p {
-padding-bottom: 1em;
+padding: 1em;
   margin: 0;
     text-align: center;
 
     
 }
 .item img {
-  width: 60%;
-    margin-left: 30px;
-  
-  
- 
-    
+max-width: 100%;
+          transition: all 1s ease;
 }
+ 
+.item img:hover {
+  border-radius: 150%;
+ 
+          transform: rotate(360deg);
+ 
 
 
-
-
-
+}
 
 
 
@@ -384,7 +383,9 @@ COLORS
 /* site body*/
 body {
   background-color: #423629;
-  color: #999;
+  color: #fff;
+    text-align: inherit;
+    margin: 0 5em 5em 5em;
 }
 
 /* red header*/
@@ -425,15 +426,15 @@ Contact page
 .contact-info {
     list-style: none;
     padding: 0;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 20em;
     font-size: 1.25em
 }
 .contact-info a {
-    display: block;
-    min-height: 20px;
+ 
+    min-height: 40px;
     background-repeat: no-repeat;
     background-size: 20px 20px;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 40px;
     margin: 1px 0 10px;
 }
 
