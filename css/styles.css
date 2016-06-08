@@ -3,7 +3,7 @@ GENERAL
 **************************/
 
 body {
-  font-family: 'Leckerli One', cursive;
+  font-family: font-family: 'Lobster Two', 400;
 }
 
 
@@ -40,11 +40,11 @@ text-align: center;
 
 h1 {
    
-  font-family: 'Leckerli One', cursive;
+  font-family: font-family: 'Lobster Two', Bold 700 Italic ;
   margin: 15px 0;
   font-size: 1.75em;
-  font-weight: normal;
-  line-height: 0.8em;
+  font-weight: bold;
+  line-height: 0.9em;
    
 }
 
@@ -54,7 +54,7 @@ h1 {
 h2 {
   font-size: .75em;
   margin: -5px 0 0;
-  font-weight: normal;
+  font-weight: bold;
    
 }
 
@@ -157,17 +157,7 @@ Front page EVa
   border-radius: 50%;
   background: #fff;
 }
-.sombra {
-  width: 90px;
-  height: 10px;
-  background: #000;
-  opacity: 0.1;
-  position: relative;
-  top: 500px;
-  left: 440px;
-  border-radius: 50%;
-  animation: shadow .4s infinite alternate ease-in-out;
-}
+
 
 @keyframes anda {
   0%   {transform: translateY(-5px)}
@@ -206,23 +196,22 @@ nav a {
   padding: 15px 10px;
 }
 
-
-
 /***************************
 PAGE: PORTFOLIO
 ****************************/
 
 
-#sb-body input { display: none; }
+
+
+#sb-body input { display: flex; }
 
 #sb-body-inner {
     top:200px;
     opacity: 0;
     width: auto;
     height:auto;
-    display: block;
+    display: inline-block;
     position: absolute;
-    
     transform: rotate(360deg) scale(0);
     -moz-transform: rotate(360deg) scale(0);
     -webkit-transform: rotate(360deg) scale(0);
@@ -290,8 +279,7 @@ label[id^="sb-nav-previous-"] {
     transform: rotate(0deg) scale(1);
     -moz-transform: rotate(0deg) scale(1);
     -webkit-transform: rotate(0deg) scale(1);
-  /* Weird bug, setting these to 360deg makes the next buttons stop working. */
-    
+
     transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -webkit-transition: opacity 1s ease-in-out;
@@ -326,6 +314,156 @@ label[id^="sb-nav-previous-"] {
 #next-6:checked ~ #sb-nav-previous-5,
 #prev-6:checked ~ #sb-nav-next-1,
 #next-6:checked ~ #sb-nav-next-1 { display: block; }
+ 
+/*******skills*******/
+
+.wrapper {
+  width: 100%;
+  height: 460px;
+  position: relative;
+  perspective: 300px
+}
+
+.sLider {
+  display: inline-block;
+    position: relative;
+ 
+      width: 640px;
+  height: 245px;
+  margin: 1.3em 8em 0;
+    overflow: visible;
+ 
+  perspective: 300px;
+  background: #000;
+   
+  
+   
+}
+
+.slide {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  font-family: Impact;
+  font-size: 96px;
+  animation-name: slideList;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  bottom: 0px;
+  transform-origin: bottom:0;
+    margin-left: auto;
+        align: center; 
+        margin-right: auto;
+    top; 0px;
+  transform: rotateX(90deg);
+  opacity: 0;
+
+      
+}
+
+.slide1 {
+  background-color: #ef7b00;
+  animation-delay: 0s;
+  z-index: 5
+}
+
+.slide2 {
+  background-color: #58bacc;
+  animation-delay: 4s;
+  z-index: 4
+}
+
+.slide3 {
+  background-color: #67b145;
+  animation-delay: 8s;
+  z-index: 3
+}
+
+.slide4 {
+  background-color: #7a3e91;
+  animation-delay: 12s;
+  z-index: 2
+}
+
+.slide5 {
+  background-color: #e41a20;
+  animation-delay: 16s;
+  z-index: 1
+}
+
+@keyframes slideList {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+    transform-origin: top
+  }
+  3% {
+    transform: rotateY(0deg);
+    opacity: 1;
+    z-index: 6
+  }
+  18% {
+    transform: rotateX(0deg);
+    opacity: 1;
+    z-index: 6
+  }
+  23% {
+    transform: rotateX(90deg);
+    opacity: 0;
+    transform-origin: bottom
+  }
+  100% {
+    transform: rotateX(90deg);
+    opacity: 0;
+    transform-origin: bottom
+  }
+}
+
+@-webkit-keyframes slideList {
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    opacity: 0;
+    -webkit-transform-origin: top
+  }
+  3% {
+    -webkit-transform: rotateY(0deg);
+    opacity: 1;
+    z-index: 6
+  }
+  18% {
+    -webkit-transform: rotateX(0deg);
+    opacity: 1;
+    z-index: 6
+  }
+  23% {
+    -webkit-transform: rotateX(90deg);
+    opacity: 0;
+    -webkit-transform-origin: bottom
+  }
+  100% {
+    -webkit-transform: rotateX(90deg);
+    opacity: 0;
+    -webkit-transform-origin: bottom
+  }
+}
+
+
+
+.slideContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5)
+}
+
+
+
+
+
 /***************************
 PAGE: ABOUT
 ****************************/
@@ -338,6 +476,7 @@ PAGE: ABOUT
   margin: 0 auto 0;
   border-radius: 100%;
 	max-height: 100%;
+    
 
    
 }
@@ -463,8 +602,5 @@ FOOTER
     color: #ccc;
 }
 
-.social-icon {
- width: 20px;
-  height: 20px;
-  margin: 400px 30px;
-}
+
+
