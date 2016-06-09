@@ -201,9 +201,6 @@ nav a {
 PAGE: PORTFOLIO
 ****************************/
 
-<section>
-<div id=pagewrap> 
-<section id="primay">
 
 #sb-body input { display: none; }
 
@@ -212,9 +209,9 @@ PAGE: PORTFOLIO
     opacity: 0;
     width: 50;
     height: 50;
-    display: block;
-    position: absolute;
-overflow:auto;
+    display: inline-flex;
+ 
+
 
     transform: rotate(360deg) scale(0);
     -moz-transform: rotate(360deg) scale(0);
