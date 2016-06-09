@@ -11,12 +11,14 @@ Two column layout
     }
     
     #secondary {
-        width: 8%;
-          
+        width: 50%;
+              float: right;
+        
+    
+                
+        }
 
-	float: right        ;
 
-}
    
     
      
@@ -42,7 +44,7 @@ Two column layout
             float: right;
         }
         #item li:inth-child(2n) {
-            clear: right;
+            clear: left;
         }
 
   @media (min-width: 410px) {
@@ -93,7 +95,7 @@ Two column layout
     }
     
     header {
-        border-bottom: 30px solid #000;
-        border-top: 30px solid #000; 
+        border-bottom: 20px solid #000;
+        border-top: 20px solid #000; 
         margin-bottom: 60px;
     }

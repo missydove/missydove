@@ -18,6 +18,8 @@ a {
 }
   img{
     max-width: 100%;
+   
+    
 }
 /***************************
 HEADING
@@ -187,11 +189,11 @@ list-style: none;
   padding: 0;
 }
 nav li {
-  display: inline-block;
+  display: inline-flex;
 }
 
 nav a {
-  font-weight:500;
+  font-weight:bolder;
   padding: 15px 10px;
 }
 
@@ -199,8 +201,9 @@ nav a {
 PAGE: PORTFOLIO
 ****************************/
 
-section
-
+<section>
+<div id=pagewrap> 
+<section id="primay">
 
 #sb-body input { display: none; }
 
@@ -211,6 +214,7 @@ section
     height: 50;
     display: block;
     position: absolute;
+overflow:auto;
 
     transform: rotate(360deg) scale(0);
     -moz-transform: rotate(360deg) scale(0);
@@ -313,7 +317,10 @@ label[id^="sb-nav-previous-"] {
 #prev-6:checked ~ #sb-nav-previous-5,
 #next-6:checked ~ #sb-nav-previous-5,
 #prev-6:checked ~ #sb-nav-next-1,
-#next-6:checked ~ #sb-nav-next-1 { display: block; }
+#next-6:checked ~ #sb-nav-next-1 
+
+{ display: block; }
+</section> 
  
 /*******skills*******/
 
@@ -466,11 +473,11 @@ PAGE: ABOUT
 ****************************/
 
 .profile-photo {
-  display: block;
-    padding: 4em;
+ display: block;
+    padding: 1em;
   
  
-  margin: 0 auto 0;
+  margin: 0 auto ;
   border-radius: 100%;
 	max-height: 100%;
     
@@ -482,12 +489,15 @@ PAGE: ABOUT
   display: flex;
   flex-wrap: wrap;
    
+   
 }
 .container .item {
-  flex: 1 0 25%;
+  flex: 2 0 25%;
   box-sizing: border-box;
   color: #fff;
   padding: 10px;
+
+
 }
 .item p {
 padding: 1em;
@@ -505,11 +515,8 @@ max-width: 100%;
   border-radius: 150%;
  
           transform: rotate(360deg);
- 
-
 
 }
-
 
 
 /*****************************
@@ -522,6 +529,7 @@ body {
   color: #fff;
     text-align: inherit;
     margin: 0 5em 5em 5em;
+    overflow: auto;
 }
 
 /* red header*/
@@ -600,7 +608,7 @@ FOOTER
      
       }
 #footer {
-   position:absolute;
+   position: absolute;
    bottom:0;
    width:100%;
    height:60px; 
