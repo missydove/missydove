@@ -8,9 +8,9 @@ body {
 
 
 #wrapper {
-  max-width: 940px;
-   margin: 0 auto;
-   padding: 0 5%;
+ padding: 5px;
+	width: 960px;
+	margin: 20px auto;
 }
 
 a {
@@ -40,11 +40,10 @@ text-align: center;
 
 h1 {
    
-  font-family: font-family: 'Lobster Two', Bold 700 Italic ;
+ font-family: 'Macondo Swash Caps', cursive;
   margin: 15px 0;
-  font-size: 1.75em;
-  font-weight: bold;
-  line-height: 0.9em;
+font-weight: normal;
+    line-height: 1.3em;
    
 }
 
@@ -54,8 +53,8 @@ h1 {
 h2 {
   font-size: .75em;
   margin: -5px 0 0;
-  font-weight: bold;
-   
+font-weight: normal;
+font-family: 'Henny Penny', cursive;
 }
 
 h3 {
@@ -200,18 +199,19 @@ nav a {
 PAGE: PORTFOLIO
 ****************************/
 
+section
 
 
-
-#sb-body input { display: flex; }
+#sb-body input { display: none; }
 
 #sb-body-inner {
-    top:200px;
+   top: 20;
     opacity: 0;
-    width: auto;
-    height:auto;
-    display: inline-block;
+    width: 50;
+    height: 50;
+    display: block;
     position: absolute;
+
     transform: rotate(360deg) scale(0);
     -moz-transform: rotate(360deg) scale(0);
     -webkit-transform: rotate(360deg) scale(0);
@@ -222,8 +222,8 @@ PAGE: PORTFOLIO
 }
 
 #sb-body-inner img {
-    width: 60%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -325,18 +325,15 @@ label[id^="sb-nav-previous-"] {
 }
 
 .sLider {
-  display: inline-block;
-    position: relative;
- 
-      width: 640px;
-  height: 245px;
-  margin: 1.3em 8em 0;
-    overflow: visible;
- 
+
+  position: relative;
+  width: 640px;
+  height: 320px;
+  margin: 0 auto;
+  overflow: visible;
   perspective: 300px;
-  background: #000;
-   
-  
+  background: #000
+      column-count: 2;
    
 }
 
@@ -530,7 +527,7 @@ body {
 /* red header*/
 header{
   background: #B80C09;
-  border-color: #B80C09;
+  border-color: #010001;
 }
 
  /*nav background on mobile */
@@ -555,7 +552,7 @@ nav a, nav a:visited {
 }
 /* selected nav link */
 nav a.selected, nav a:hover {
-  color: #B80C09;
+  color: #423629;
 }
 
 
@@ -600,7 +597,10 @@ FOOTER
     clear: both;
     padding-top: 5px;
     color: #ccc;
-}
-
-
-
+     
+      }
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px; 
