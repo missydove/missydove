@@ -1,9 +1,7 @@
-@media screen and (min-width: 480px){
-  
-}
+
     
 /************************
-3 column layout
+about me
 **************************/
 
      /*  SECTIONS  */
@@ -112,7 +110,8 @@
         font-size: 1.125em;
         margin-right: 5%;
         text-align: right;
-        width: 45%
+        width: 45%;
+         
     }
     
     #logo {
@@ -123,11 +122,11 @@
     }
     
     h1 {
-        font-size: 2.5em;
+        font-size: 3.5em;
         
     }
     h2{
-            font-size: 0.825em;
+            font-size: 1.em;
         margin-bottom: 20px;
     }
     
