@@ -206,18 +206,24 @@ PAGE: PORTFOLIO
 html, body, #body { background: #333 url("http://codepen.io/images/classy_fabric.png"); }
 
 #sb-body {
-    left: 50%;
-    margin-left: -305px;
-    display: block;
+
+
+    display: flex;
     width: 609px;
     height: 405px;
-    position: absolute;
+     margin-left: auto;
+    margin-right: auto;
+    margin-top: auto; 
+
+    
+    
+    
 }
 
 #sb-body input { display: none; }
 
 #sb-body-inner {
-    top: 200px;
+    top: 230px;
     opacity: 0;
     width: 609px;
     height: 405px;
